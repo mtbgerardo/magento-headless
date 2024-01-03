@@ -1,0 +1,40 @@
+//-------------components/graphql/product.graphql-------------//
+
+query ProductQuery($filters: ProductAttributeFilterInput) {
+  products(filter: $filters) {
+    items {
+      id
+      name
+      sku
+      special_price
+      al_pager_precio
+      al_pagar_label
+      informacion_adicional_uno
+      informacion_adicional_dos
+      informacion_adicional_tres
+      coleccion
+      categories{
+        canonical_url
+      }
+      description{
+        html
+      }
+      short_description{
+        html
+      }
+      image {
+        disabled
+        label
+        position
+        url
+      }
+      rating_summary
+      media_gallery{
+        url
+        position
+        label
+        disabled
+      }
+    }
+  }
+}
