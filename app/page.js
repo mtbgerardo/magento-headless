@@ -7,7 +7,7 @@ export default function Home() {
     async function fetchData() {
       try {
         const data = await fetch("https://moblum.com/graphql", {
-          method: "Post",
+          method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
@@ -68,7 +68,7 @@ export default function Home() {
         console.log(error.message);
       }
     }
-    fetchData();
+    //fetchData();
   }, []);
 
   return <main>TEST 1</main>;
