@@ -65,6 +65,7 @@ export default async function Home() {
         console.log(error.message);
       }
     }
+    fetchData();
   }, []);
 
   return <main>TEST</main>;
