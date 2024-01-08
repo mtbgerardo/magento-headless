@@ -1,17 +1,16 @@
-import { useEffect } from "react"
+import { useEffect } from "react";
 
 export default async function Home() {
-
   useEffect(() => {
     async function fetchData() {
       try {
-        const data = await fetch('https://moblum.com/graphql', {
-          method: 'POST',
+        const data = await fetch("https://moblum.com/graphql", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            query:`
+            query: `
             query ProductQuery($filters: ProductAttributeFilterInput) {
               products(filter: $filters) {
                 items {
@@ -51,22 +50,22 @@ export default async function Home() {
               }
             }
           `,
-          variables: {
-            filters: {
-              url_key: {
-                eq: "mesa-comedor-grabado-ping-pong-240-x-120-cm-forrest-gris"
-              }
-            }
-          }
+            variables: {
+              filters: {
+                url_key: {
+                  eq: "mesa-comedor-grabado-ping-pong-240-x-120-cm-forrest-gris",
+                },
+              },
+            },
           }),
         })
-        .then((res) => res.json())
-        .then((result) => console.log(result))
-      } catch(error) {
-        console.log(error.message)
+          .then((res) => res.json())
+          .then((result) => console.log(result));
+      } catch (error) {
+        console.log(error.message);
       }
     }
-  }, [])
+  }, []);
 
-  return <main>HELLO!!!</main>
-};
+  return <main>TEST</main>;
+}
