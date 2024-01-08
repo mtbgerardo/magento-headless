@@ -1,6 +1,8 @@
+"use client";
+
 import { useEffect } from "react";
 
-export default async function Home() {
+export default function Home() {
   useEffect(() => {
     async function fetchData() {
       try {
