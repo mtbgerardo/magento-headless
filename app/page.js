@@ -11,6 +11,7 @@ export default function Home() {
           headers: {
             "Content-Type": "application/json",
           },
+          mode: "cors",
           body: JSON.stringify({
             query: `
             query ProductQuery($filters: ProductAttributeFilterInput) {
