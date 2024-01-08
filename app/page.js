@@ -7,7 +7,7 @@ export default function Home() {
     async function fetchData() {
       try {
         const data = await fetch("https://moblum.com/graphql", {
-          method: "GET",
+          method: "Post",
           headers: {
             "Content-Type": "application/json",
           },
